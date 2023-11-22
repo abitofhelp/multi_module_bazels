@@ -9,7 +9,7 @@ go_library(
     srcs = ["cmd.go"],
     importpath = "github.com/abitofhelp/multimods/cmd",
     deps = [
-        "@com_github_dustin_go_humanize//:go-humanize",
+        #"@com_github_dustin_go_humanize//:go-humanize",
         "//vendor/github.com/abitofhelp/multimods/pkg/lib_a:lib_a",
         "//vendor/github.com/abitofhelp/multimods/pkg/lib_b:lib_b",
     ],

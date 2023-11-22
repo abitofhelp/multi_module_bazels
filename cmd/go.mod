@@ -13,5 +13,3 @@ replace (
 	github.com/abitofhelp/multimods/pkg/lib_a => /Users/mike/Go/src/github.com/abitofhelp/multimods/pkg/lib_a
 	github.com/abitofhelp/multimods/pkg/lib_b => /Users/mike/Go/src/github.com/abitofhelp/multimods/pkg/lib_b
 )
-
-

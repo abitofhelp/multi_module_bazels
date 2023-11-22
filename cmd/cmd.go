@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/abitofhelp/multimods/lib_a"
-	"github.com/abitofhelp/multimods/lib_b"
+	"github.com/abitofhelp/multimods/pkg/lib_a"
+	"github.com/abitofhelp/multimods/pkg/lib_b"
 )
 
 func main() {
@@ -17,5 +17,5 @@ func main() {
 
 	fmt.Printf("\nUSA Formatted Large Number: %s", lib_a.HumanizedLargeValue())
 
-	fmt.Printf("\nSay '%s' from lib_ab, howdy", lib_b.Howdy())
+	fmt.Printf("\nSay '%s' from lib_b, howdy", lib_b.Howdy())
 }
