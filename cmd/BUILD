@@ -1,4 +1,4 @@
-load("@rules_go//go:def.bzl", "go_library", "go_binary")
+load("@rules_go//go:def.bzl", "go_binary", "go_library")
 load("@gazelle//:def.bzl", "gazelle")
 
 # gazelle:prefix github.com/abitofhelp/multimod/cmd
@@ -12,8 +12,8 @@ go_library(
     visibility = ["//visibility:private"],
 )
 
-#go_binary(
-#    name = "cmd",
-#    embed = [":cmd_lib"],
-#    visibility = ["//visibility:public"],
-#)
+go_binary(
+    name = "cmd",
+    embed = [":cmd_lib"],
+    visibility = ["//visibility:public"],
+)
