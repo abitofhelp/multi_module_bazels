@@ -2,7 +2,7 @@
 
 This project demonstrates how to implement a monorepo using bzlmod and supporting Gazelle.
 
-The issue is that Gazelle only permits configuring one go.mod file in the root's MODULE.bazel, as shown below:  
+The issue is that Gazelle only permits configuring one go.mod file, which cannot have a path, in the root's MODULE.bazel, as shown below:  
 
 ```
 # Register the go.mod file with the go_deps extension.
@@ -12,6 +12,6 @@ go_deps.from_file(go_mod = "//:go.mod")
 ```
 
 So, if there are multiple projects in the monorepo and each one has its own go.mod file, we cannot configure them at the root level.
-Each project has to implement MODULE.bazel, WORKSPACE, deps.bzl, BUILD, .bazelrc, and .bazelversion.
+Each project has to implement it own Bazel & go module.
 
-This repository defines the configuration in the root
+I am going to share this project with others to determine whether there is a better way to achieve this goal...
