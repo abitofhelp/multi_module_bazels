@@ -1,0 +1,16 @@
+module(
+    name = "lib_a",
+    version = "0.0.1",
+)
+
+bazel_dep(name = "gazelle", version = "0.34.0")
+bazel_dep(name = "rules_go", version = "0.43.0")
+
+# Configure common Go settings for all modules/submodules:
+go_sdk = use_extension("@rules_go//go:extensions.bzl", "go_sdk")
+
+# Download a specific version of the SDK:
+go_sdk.download(version = "1.21.3")
+
+# Register the Go SDK installed on the host.
+#go_sdk.host()
