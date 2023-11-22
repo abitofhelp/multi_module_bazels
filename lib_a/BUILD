@@ -7,6 +7,6 @@ gazelle(name = "gazelle")
 go_library(
     name = "lib_a",
     srcs = ["lib_a.go"],
-    deps = [],
+    deps = ["@com_github_dustin_go_humanize//:go-humanize"],
     visibility = ["//visibility:public"],
 )
