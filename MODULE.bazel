@@ -16,3 +16,9 @@ local_path_override(
     module_name = "lib_b",
     path = "./pkg/lib_b",
 )
+
+bazel_dep(name = "cmd", version = "0.0.1")
+local_path_override(
+    module_name = "cmd",
+    path = "./cmd",
+)

@@ -1,6 +1,7 @@
 go 1.21
 
 use (
+	./cmd
 	./lib_a
 	./lib_b
 )
