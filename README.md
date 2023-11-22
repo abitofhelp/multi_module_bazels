@@ -1,4 +1,4 @@
-# multimod   
+# multimods   
 
 This project demonstrates how to implement a monorepo using bzlmod with multiple MODULE.bazel files and Gazelle.
 
@@ -20,7 +20,7 @@ Each project builds properly at its level (lib_a, lib_b).  However, when I try t
 receive the following error.  I am still investigating it...
 
 ```
-(20:18:53) ERROR: <builtin>: fetching local_repository rule //:lib_b~override: java.io.IOException: The repository's path is "./pkg/lib_b" (absolute: "/Users/mike/Go/src/github.com/abitofhelp/multimod/pkg/lib_b") but it does not exist or is not a directory.
+(20:18:53) ERROR: <builtin>: fetching local_repository rule //:lib_b~override: java.io.IOException: The repository's path is "./pkg/lib_b" (absolute: "/Users/mike/Go/src/github.com/abitofhelp/multimods/pkg/lib_b") but it does not exist or is not a directory.
 (20:18:53) ERROR: Error computing the main repository mapping: unknown error during computation of main repo mapping
 (20:18:53) Loading:
 Fetching https://bcr.bazel.build/modules/gazelle/0.34.0/MODULE.bazel

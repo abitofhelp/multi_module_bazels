@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/abitofhelp/multimod/lib_a"
-	"github.com/abitofhelp/multimod/lib_b"
+	"github.com/abitofhelp/multimods/lib_a"
+	"github.com/abitofhelp/multimods/lib_b"
 )
 
 func main() {

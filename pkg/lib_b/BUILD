@@ -1,7 +1,7 @@
 load("@rules_go//go:def.bzl", "go_library")
 load("@gazelle//:def.bzl", "gazelle")
 
-# gazelle:prefix github.com/abitofhelp/multimod/pkg/lib_b
+# gazelle:prefix github.com/abitofhelp/multimods/pkg/lib_b
 gazelle(name = "gazelle")
 
 go_library(

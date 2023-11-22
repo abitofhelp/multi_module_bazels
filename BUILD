@@ -1,4 +1,4 @@
 load("@gazelle//:def.bzl", "gazelle")
 
-# gazelle:prefix github.com/abitofhelp/multimod
+# gazelle:prefix github.com/abitofhelp/multimods
 gazelle(name = "gazelle")

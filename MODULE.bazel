@@ -1,5 +1,5 @@
 module(
-    name = "multimod",
+    name = "multimods",
     version = "0.0.1",
 )
 
