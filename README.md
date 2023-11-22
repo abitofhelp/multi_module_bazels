@@ -1,6 +1,6 @@
 # multi_module_bazels   
 
-This project demonstrates how to implement a monorepo using bzlmod and supporting Gazelle.
+This project demonstrates how to implement a monorepo using bzlmod and Gazelle.
 
 The issue is that Gazelle only permits configuring one go.mod file, which cannot have a path, in the root's MODULE.bazel, as shown below:  
 
@@ -14,4 +14,15 @@ go_deps.from_file(go_mod = "//:go.mod")
 So, if there are multiple projects in the monorepo and each one has its own go.mod file, we cannot configure them at the root level.
 Each project has to implement it own Bazel & go module.
 
-I am going to share this project with others to determine whether there is a better way to achieve this goal...
+ISSUES:
+
+Each project builds properly at its level (lib_a, lib_b).  However, when I try to build the entire project from the root, I
+receive the following error.  I am still investigating it...
+
+```
+(20:18:53) ERROR: <builtin>: fetching local_repository rule //:lib_b~override: java.io.IOException: The repository's path is "./pkg/lib_b" (absolute: "/Users/mike/Go/src/github.com/abitofhelp/multi_module_bazels/pkg/lib_b") but it does not exist or is not a directory.
+(20:18:53) ERROR: Error computing the main repository mapping: unknown error during computation of main repo mapping
+(20:18:53) Loading:
+Fetching https://bcr.bazel.build/modules/gazelle/0.34.0/MODULE.bazel
+```
+
