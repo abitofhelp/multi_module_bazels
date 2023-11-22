@@ -7,6 +7,12 @@ gazelle(name = "gazelle")
 go_library(
     name = "lib_b",
     srcs = ["lib_b.go"],
-    deps = ["@com_github_dustin_go_humanize//:go-humanize"],
+    deps = [],
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "go_default_library",
+    actual = ":lib_b",
     visibility = ["//visibility:public"],
 )

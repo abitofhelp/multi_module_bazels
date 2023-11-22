@@ -4,14 +4,15 @@ load("@gazelle//:def.bzl", "gazelle")
 # gazelle:prefix github.com/abitofhelp/multimods/cmd
 gazelle(name = "gazelle")
 
+
+
 go_library(
     name = "cmd_lib",
     srcs = ["cmd.go"],
     importpath = "github.com/abitofhelp/multimods/cmd",
     deps = [
-        "@com_github_dustin_go_humanize//:go-humanize",
-        "//vendor/github.com/abitofhelp/multimods/pkg/lib_a:lib_a",
-        "//vendor/github.com/abitofhelp/multimods/pkg/lib_b:lib_b",
+         "//pkg/lib_a:go_default_library",
+         "//pkg/lib_b:go_default_library",
     ],
     visibility = ["//visibility:private"],
 )
@@ -21,3 +22,4 @@ go_binary(
     embed = [":cmd_lib"],
     visibility = ["//visibility:public"],
 )
+
