@@ -1,6 +1,6 @@
 # multi_module_bazels   
 
-This project demonstrates how to implement a monorepo using bzlmod and Gazelle.
+This project demonstrates how to implement a monorepo using bzlmod with multiple MODULE.bazel files and Gazelle.
 
 The issue is that Gazelle only permits configuring one go.mod file, which cannot have a path, in the root's MODULE.bazel, as shown below:  
 
