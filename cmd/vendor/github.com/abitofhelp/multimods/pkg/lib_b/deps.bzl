@@ -1,5 +1,8 @@
 load("@gazelle//:deps.bzl", "go_repository")
 
+#def go_dependencies():
+#    pass
+
 def go_dependencies():
     go_repository(
         name = "com_github_dustin_go_humanize",
