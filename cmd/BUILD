@@ -8,7 +8,11 @@ go_library(
     name = "cmd_lib",
     srcs = ["cmd.go"],
     importpath = "github.com/abitofhelp/multimod/cmd",
-    deps = ["@com_github_dustin_go_humanize//:go-humanize"],
+    deps = [
+        "@com_github_dustin_go_humanize//:go-humanize",
+        "//vendor/github.com/abitofhelp/multimod/pkg/lib_a:lib_a",
+        "//vendor/github.com/abitofhelp/multimod/pkg/lib_b:lib_b",
+    ],
     visibility = ["//visibility:private"],
 )
 

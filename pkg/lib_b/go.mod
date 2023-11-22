@@ -1,4 +1,4 @@
-module github.com/abitofhelp/multimod/lib_a
+module github.com/abitofhelp/multimod/pkg/lib_b
 
 go 1.21
 
